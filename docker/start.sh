@@ -204,9 +204,10 @@ trap 'kill "$CLOCK_PID" 2>/dev/null || true; [ -n "$SUBS_PID" ] && kill "$SUBS_P
 # Static panel text (unchanged across videos)
 #############################################
 printf 'LEONID  METEOR  SHOWER' > "$ASSET_DIR/title1.txt"
+printf 'LIVE METEOR  SHOWER' > "$ASSET_DIR/title2.txt"
 printf 'NOVEMBER METEOR SHOWER' > "$ASSET_DIR/header.txt"
 printf 'LEONID METEOR WATCH' > "$ASSET_DIR/eyebrow.txt"
-printf 'Subscribe for Leonid meteor updates' > "$ASSET_DIR/cta.txt"
+printf 'Subscribe for space discoveries' > "$ASSET_DIR/cta.txt"
 printf 'DID YOU KNOW' > "$ASSET_DIR/fact_label.txt"
 
 #############################################
