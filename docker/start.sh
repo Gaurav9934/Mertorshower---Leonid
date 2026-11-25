@@ -23,7 +23,7 @@ if [ -z "${YOUTUBE_API_KEY:-}" ] || [ -z "${YOUTUBE_CHANNEL_ID:-}" ]; then
 fi
 
 echo "========================================"
-echo "Starting 24/7 YouTube Stream (Documentary Overlay)"
+echo "Starting 24/7 YouTube Stream - Leonids Meteor Shower 2026 LIVE"
 echo "Output Resolution : 1280x720 (720p — sized for a 2-core CI runner)"
 echo "FPS               : 30"
 echo "========================================"
@@ -62,14 +62,16 @@ SUB_ICON_R=20
 ENABLE_BUMPER=true
 BUMPER_DURATION=5   # seconds
 BUMPER_MESSAGES=(
-    "The Leonid meteor shower remains active through November 30."
-    "Stay tuned for more views of fast Leonid meteors."
-    "Earth is crossing debris left behind by comet 55P Tempel-Tuttle."
-    "Leonid meteors can leave bright, persistent trails across the sky."
+    "The Leonids are caused by debris from comet 55P/Tempel-Tuttle."
+    "Leonid meteors strike Earth's atmosphere at about 71 km per second."
+    "The Leonid radiant lies in the constellation Leo."
+    "The 2026 Leonids were active from November 6 to November 30."
+    "The 2026 Leonid peak was around November 17 to 18."
     "The Leonids are among the fastest annual meteor showers."
-    "The 2026 Leonid peak has passed, but shower activity continues."
-    "Leonid particles enter Earth's atmosphere at about 71 kilometres per second."
-    "Explore the science behind the Leonid meteor shower."
+    "Comet 55P/Tempel-Tuttle returns to the inner Solar System every 33 years."
+    "The 1966 Leonid storm produced thousands of meteors per minute."
+    "Leonids can produce bright fireballs and glowing trains."
+    "Stay tuned for more shooting stars and space simulations."
 )
 
 #############################################
@@ -203,11 +205,11 @@ trap 'kill "$CLOCK_PID" 2>/dev/null || true; [ -n "$SUBS_PID" ] && kill "$SUBS_P
 #############################################
 # Static panel text (unchanged across videos)
 #############################################
-printf 'LEONID  METEOR  SHOWER' > "$ASSET_DIR/title1.txt"
-printf 'LIVE METEOR  SHOWER' > "$ASSET_DIR/title2.txt"
-printf 'NOVEMBER METEOR SHOWER' > "$ASSET_DIR/header.txt"
-printf 'LEONID METEOR WATCH' > "$ASSET_DIR/eyebrow.txt"
-printf 'Subscribe for space discoveries' > "$ASSET_DIR/cta.txt"
+printf 'LEONIDS METEOR SHOWER' > "$ASSET_DIR/title1.txt"
+printf 'S H O O T I N G   S T A R S   2 0 2 6' > "$ASSET_DIR/title2.txt"
+printf 'PEAK: NOV 17-18  |  4K SIMULATION' > "$ASSET_DIR/header.txt"
+printf 'LEONIDS 2026 LIVE' > "$ASSET_DIR/eyebrow.txt"
+printf 'Subscribe for meteor shower updates' > "$ASSET_DIR/cta.txt"
 printf 'DID YOU KNOW' > "$ASSET_DIR/fact_label.txt"
 
 #############################################
